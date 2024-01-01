@@ -1,6 +1,5 @@
 import { View, Text, ScrollView, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
-import { categoryData } from '../constants'
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,

@@ -33,9 +33,7 @@ const HomeScreen = () => {
       const response = await axios.get(
         'https://themealdb.com/api/json/v1/1/categories.php'
       )
-      {
-        // console.log('get categories ', response.data)
-      }
+
       if (response && response.data) {
         setCategories(response.data.categories)
       }
@@ -48,9 +46,7 @@ const HomeScreen = () => {
       const response = await axios.get(
         `https://themealdb.com/api/json/v1/1/filter.php?c=${category}`
       )
-      {
-        //console.log('get categories ', response.data)
-      }
+
       if (response && response.data) {
         setMeals(response.data.meals)
       }

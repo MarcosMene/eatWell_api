@@ -1,11 +1,10 @@
-import { View, Text, Pressable, Image } from 'react-native'
+import { View, Text, Pressable } from 'react-native'
 import React from 'react'
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen'
 import MasonryList from '@react-native-seoul/masonry-list'
-import { mealData } from '../constants'
 import Animated, { FadeInDown } from 'react-native-reanimated'
 import Loading from './loading'
 import { CachedImage } from '../helpers/image'
@@ -33,10 +32,7 @@ export default function Recipes({ categories, meals }) {
             renderItem={({ item, i }) => (
               <RecipeCard item={item} index={i} navigation={navigation} />
             )}
-            // refreshing={isLoadingNext}
-            // onRefresh={() => refetch({first: ITEM_CNT})}
             onEndReachedThreshold={0.1}
-            // onEndReached={() => loadNext(ITEM_CNT)}
           />
         )}
       </View>
@@ -62,11 +58,6 @@ const RecipeCard = ({ item, index, navigation }) => {
         className='flex justify-center mb-4 space-y-1'
         onPress={() => navigation.navigate('RecipeDetail', { ...item })}
       >
-        {/* <Image 
-                    source={{uri: item.strMealThumb}}
-                    style={{width: '100%', height: index%3==0? hp(25): hp(35), borderRadius: 35}}
-                    className="bg-black/5"
-                /> */}
         <CachedImage
           uri={item.strMealThumb}
           style={{

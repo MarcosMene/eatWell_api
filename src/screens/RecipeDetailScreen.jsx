@@ -42,7 +42,6 @@ export default function RecipeDetailScreen(props) {
       const response = await axios.get(
         `https://themealdb.com/api/json/v1/1/lookup.php?i=${id}`
       )
-      //   console.log('got meal data: ',response.data);
       if (response && response.data) {
         setMeal(response.data.meals[0])
         setLoading(false)
@@ -88,7 +87,6 @@ export default function RecipeDetailScreen(props) {
         <View className='flex-row justify-center'>
           <CachedImage
             uri={item.strMealThumb}
-            // sharedTransitionTag={item.strMeal} // this will only work on native image (now using Image from expo-image)
             style={{
               width: wp(100),
               height: hp(50),
