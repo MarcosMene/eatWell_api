@@ -31,16 +31,16 @@ const WelcomeScreen = () => {
   }, [])
 
   return (
-    <View className="flex-1 justify-center items-center space-y-10 bg-amber-500">
-      <StatusBar style="light" />
+    <View className='flex-1 justify-center items-center space-y-10 bg-amber-500'>
+      <StatusBar style='light' />
 
       {/*logo image */}
       <Animated.View
-        className="bg-white/20 rounded-full"
+        className='bg-white/20 rounded-full'
         style={{ padding: ring2padding }}
       >
         <Animated.View
-          className="bg-white/20 rounded-full"
+          className='bg-white/20 rounded-full'
           style={{ padding: ring1padding }}
         >
           <Image
@@ -51,16 +51,16 @@ const WelcomeScreen = () => {
       </Animated.View>
 
       {/*title */}
-      <View className="flex items-center space-y-2">
+      <View className='flex items-center space-y-2'>
         <Text
           style={{ fontSize: hp(7) }}
-          className="font-bold text-white tracking-widest"
+          className='font-bold text-white tracking-widest'
         >
           eatWell
         </Text>
         <Text
           style={{ fontSize: hp(2) }}
-          className="font-medium text-white tracking-widest"
+          className='font-medium text-white tracking-widest'
         >
           Food is always right
         </Text>

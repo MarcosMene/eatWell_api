@@ -60,28 +60,28 @@ const HomeScreen = () => {
   }
 
   return (
-    <View className="flex-1 bg-white">
-      <StatusBar style="dark" />
+    <View className='flex-1 bg-white'>
+      <StatusBar style='dark' />
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ paddingBottom: 50 }}
-        className="space-y-6 pt-14"
+        className='space-y-6 pt-14'
       >
         {/*greeting and punchline */}
-        <View className="mx-4 space-y-2 mb-2">
+        <View className='mx-4 space-y-2 mb-2'>
           <View>
             <Text
               style={{ fontSize: hp(3.8) }}
-              className="font-semibold text-neutral-600"
+              className='font-semibold text-neutral-600'
             >
               eatWell
             </Text>
           </View>
           <Text
             style={{ fontSize: hp(3.8) }}
-            className="font-semibold text-neutral-600"
+            className='font-semibold text-neutral-600'
           >
-            Bon <Text className="text-amber-400">appétit</Text>
+            Bon <Text className='text-amber-400'>appétit</Text>
           </Text>
         </View>
 
